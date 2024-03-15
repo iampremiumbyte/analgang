@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .hide {
     display: none !important;
 }
@@ -14,7 +13,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2B2F38;
     height: 100dvh;
-    overflow: hidden;
 }
 
 
@@ -94,6 +92,36 @@ video {
     cursor: pointer;
 }
 
+.rotate-wrap {
+    position: absolute;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    background-color: #973B75;
+    justify-content: center;
+    align-items: center;
+    display: none !important;
+}
+
+.rotate-wrap h2 {
+    color: #fff;
+    text-transform: uppercase;
+    animation-name: roll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
 @keyframes rise {
     from {
         transform: scale(1);
@@ -116,7 +144,11 @@ video {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
+    .rotate-wrap {
+        display: flex !important;
+    }
+
     img {
         height: 100vh;
     }
