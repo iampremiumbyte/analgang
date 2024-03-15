@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>$AnalGang</title>
+  </head>
+  <body>
+    <img src="/assets/img/SITE_03.png" usemap="#image-map" />
+
+    <a href="/page4.html">
+      <div class="box" id="box1"></div>
+    </a>
+    <a href="/page5.html">
+      <div class="box" id="box2"></div>
+    </a>
+    <a href="/page5.html">
+      <div class="box" id="box3"></div>
+    </a>
+    <a href="/page6.html">
+      <div class="box" id="box4"></div>
+    </a>
+
+    <map name="image-map">
+      <area
+        id="area1"
+        target=""
+        alt="logo"
+        title="logo"
+        href=""
+        coords="815,866,1100,961"
+        shape="rect"
+      />
+      <area
+        id="area2"
+        target=""
+        alt="buy now"
+        title="buy now"
+        href=""
+        coords="736,973,885,1036"
+        shape="rect"
+      />
+      <area
+        id="area3"
+        target=""
+        alt="socials"
+        title="socials"
+        href=""
+        coords="898,972,1025,1032"
+        shape="rect"
+      />
+      <area
+        id="area4"
+        target=""
+        alt=""
+        title=""
+        href=""
+        coords="1043,974,1165,1036"
+        shape="rect"
+      />
+    </map>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/rwdImageMaps.js"></script>
+    <script>
+      $(document).ready(function (e) {
+        $("img[usemap]").rwdImageMaps();
+      });
+    </script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2B2F38;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    position: absolute;
+    border: 3px solid rgba(255, 255, 255, 0.169);
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    z-index: 10;
+    opacity: .7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.preloader video,
+.preloader .button-wrap {
+    position: absolute;
+}
+
+.button-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: #973B75;
+}
+
+.button-wrap button {
+    width: 15em;
+    height: 4em;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    background-color: #020202;
+    color: #fff6fc;
+    animation-name: rise;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+}
+
+@keyframes rise {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: .7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    img {
+        height: 100vh;
+    }
+
+    video {
+        background-color: #000;
+        object-fit: contain;
+    }
+}

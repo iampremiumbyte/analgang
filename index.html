@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>$AnalGang</title>
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="button-wrap" id="btnWrap">
+        <button id="enterBtn">Please wait...</button>
+      </div>
+      <video
+        src="/assets/welcome.mp4"
+        preload="metadata"
+        id="welcomeVideo"
+        playsinline
+      ></video>
+    </div>
+
+    <img src="/assets/img/SITE_01.png" usemap="#image-map" />
+
+    <a href="/page5.html">
+      <div class="box" id="box1"></div>
+    </a>
+    <a href="/page4.html">
+      <div class="box" id="box2"></div>
+    </a>
+    <a href="/page6.html">
+      <div class="box" id="box3"></div>
+    </a>
+    <a href="/page2.html">
+      <div class="box" id="box4"></div>
+    </a>
+
+    <map name="image-map">
+      <area
+        id="area1"
+        target=""
+        alt="socials"
+        title="socials"
+        href=""
+        coords="169,748,471,910"
+        shape="rect"
+      />
+      <area
+        id="area2"
+        target=""
+        alt="buy now"
+        title="buy now"
+        href=""
+        coords="718,739,1144,917"
+        shape="rect"
+      />
+      <area
+        id="area3"
+        target=""
+        alt="memes"
+        title="memes"
+        href=""
+        coords="1359,757,1668,926"
+        shape="rect"
+      />
+      <area
+        id="area4"
+        target=""
+        alt="meet"
+        title="meet"
+        href=""
+        coords="325,967,1548,1049"
+        shape="rect"
+      />
+    </map>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/rwdImageMaps.js"></script>
+    <script>
+      $(document).ready(function (e) {
+        $("img[usemap]").rwdImageMaps();
+      });
+    </script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
